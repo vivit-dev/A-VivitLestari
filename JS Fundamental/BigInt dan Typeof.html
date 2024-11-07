@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contoh BigInt dan Operator typeof</title>
+</head>
+<body>
+  <h1>Contoh BigInt dan Operator typeof</h1>
+
+  <p id="bigintExample"></p>
+  <p id="typeofExample"></p>
+
+  <script>
+    // Menggunakan tipe data BigInt
+    let angkaBesar = 1234567890123456789012345678901234567890n; // angka besar dengan BigInt
+    document.getElementById("bigintExample").innerText = "Nilai BigInt: " + angkaBesar;
+
+    // Menggunakan operator typeof untuk mengecek tipe data
+    let hasilBigInt = typeof angkaBesar;
+    let hasilNumber = typeof 42; // contoh lain dengan number biasa
+    let hasilString = typeof "Hello, world!";
+    let hasilBoolean = typeof true;
+
+    // Menampilkan hasil penggunaan typeof di halaman
+    document.getElementById("typeofExample").innerHTML = `
+      <strong>Penggunaan typeof:</strong><br>
+      Tipe dari angkaBesar: ${hasilBigInt} <br>
+      Tipe dari angka 42: ${hasilNumber} <br>
+      Tipe dari "Hello, world!": ${hasilString} <br>
+      Tipe dari true: ${hasilBoolean}
+    `;
+  </script>
+</body>
+</html>

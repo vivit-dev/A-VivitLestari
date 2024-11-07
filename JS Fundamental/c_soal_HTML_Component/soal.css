@@ -1,0 +1,307 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color: #fffff0;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+/* Navbar styles */
+.navbar {
+  width: 100%;
+  height: 64px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 150px;
+  background-color: #4C37EE;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,.3), 0 4px 8px 3px rgba(0,0,0,.15);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+.c_soal-rectangle {
+  height: 44px;
+  width: auto;
+}
+/* Answer grid styles */
+.c_soal-frame10 {
+  width: 100%;
+}
+.c_soal-frame17 {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.c_soal-instance21,
+.c_soal-instance22,
+.c_soal-instance23 {
+  color: #fffff0;
+  font-size: 16px;
+  line-height: 19px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+.c_soal-instance21:hover {
+  color: #FB6816;
+}
+.c_soal-instance22:hover {
+  color: #FB6816;
+}
+.c_soal-instance23:hover {
+  color: #FB6816;
+}
+.c_soal-instance24 {
+  width: 36px;
+  height: 36px;
+}
+
+/* Main content container */
+.c_soal-frame {
+  width: 100%;
+  max-width: 1440px;
+  margin: 37px auto;
+  padding: 96px 154px 64px;
+  
+}
+
+/* Content styles */
+.c_soal-frame01 {
+  width: 100%;
+  background-color: #4C37EE;
+  border-radius: 20px;
+  padding: 32px;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.c_soal-text01 {
+  color: #fffff0;
+  font-size: 20px;
+}
+
+.timer {
+  color: #fffff0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.c_soal-frame04 {
+  display: flex;
+  gap: 32px;
+  justify-content: space-between;
+}
+
+.c_soal-frame05 {
+  flex: 1;
+  max-width: 786px;
+}
+
+.c_soal-frame06 {
+  background-color: #fffff0;
+  border-radius: 20px;
+  padding: 32px;
+  margin-bottom: 32px;
+  height: 273px; /* Menentukan tinggi elemen soal */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Agar konten di dalamnya memiliki ruang yang cukup */
+}
+  
+.c_question-container {
+  display: flex;
+  width: 249px;
+  height: 455px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto; /* Pusatkan elemen jika perlu */
+}
+
+.question-header {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.c_soal-text05 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.c_soal-text07 {
+  font-size: 18px;
+  line-height: 22px;
+  text-align: left;
+  margin-top: auto; /* Menambahkan margin otomatis di atas */
+  margin-bottom: auto; /* Menambahkan margin otomatis di bawah */
+}
+
+/* Answer grid styles */
+.answer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Membuat dua kolom */
+    gap: 32px; /* Jarak antara opsi jawaban */
+}
+
+.answer-option {
+  display: flex;
+  align-items: center;
+  background-color: #fffff0;
+  border-radius: 10px;
+  padding: 20px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  width: 100%;
+  height: 59px;
+  gap: 8px;
+  font-weight: bold;
+}
+
+.answer-option:hover {
+  background-color: #FDAC7F;
+}
+
+.radio-input {
+  display: none;
+}
+
+.radio-custom {
+  width: 24px;
+  height: 24px;
+  border: 2px solid #00000E;
+  border-radius: 50%;
+  margin-right: 12px;
+  position: relative;
+}
+
+.radio-input:checked + .radio-custom::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  background-color: #4C37EE;
+  border-radius: 50%;
+}
+
+.answer-letter {
+  font-weight: 600;
+  margin-right: 8px;
+}
+
+.answer-text {
+  flex: 1;
+}
+
+/* Side panel styles */
+.side-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  /*min-width: 250px;*/
+  width: 249px;
+  align-items: center;
+}
+
+.number-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(40px, 1fr)); /* 5 tombol per baris */
+  gap: 12px;
+  justify-content: center;  /* pusatkan grid di dalam container */
+  width: 100%; /* Tambahkan ini */
+  margin: 0 auto; /* Tambahkan ini */
+}
+
+.number-btn {
+  width: 100%;
+  min-width: 40px;
+  height: 40px;
+  background-color: #fffff0; /* Warna latar belakang */
+  border: none; /* Hilangkan border default */
+  border-radius: 5px; /* Melengkungkan sudut */
+  font-weight: 700; /* Ketebalan teks */
+  cursor: pointer; /* Ganti kursor menjadi tangan saat hover */
+  transition: background-color 0.2s; /* Efek transisi */
+  font-size: 18px;
+}
+.number-btn:hover {
+  background-color: #8EFFE4;
+}
+
+.c_finish-button {
+  width: 249px;
+  height: 44px; /* Sesuaikan ukuran tombol */
+  background-color: #23FFCA; /* Warna sesuai dengan desain */
+  font-weight: bold;
+  font-size: 17px;
+  color: #4C37EE;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  display: flex;
+  padding: 10px 30px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  box-shadow: 4px -4px 8px 0px rgba(0, 0, 0, 0.25) inset;
+}
+
+
+.c_finish-button:hover {
+  background-color: #8EFFE4;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .answer-grid {
+    grid-template-columns: 1fr; /* Satu kolom pada layar kecil */
+  }
+  .navbar {
+      padding: 0 20px;
+  }
+
+  .c_soal-frame {
+      padding: 96px 20px 32px;
+  }
+
+  .c_soal-frame04 {
+      flex-direction: column;
+  }
+
+  .c_soal-frame05 {
+      max-width: 100%;
+  }
+
+  .number-grid {
+      grid-template-columns: repeat(5, 1fr);
+      max-width: 100%;
+  }
+
+  .number-btn {
+      width: 100%;
+  }
+  .side-panel{
+    width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  .number-grid {
+      grid-template-columns: repeat(auto-fit, minmax(35px, 1fr)); /* Lebih kecil untuk mobile */
+      gap: 8px;
+  }
+}
